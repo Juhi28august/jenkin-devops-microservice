@@ -13,4 +13,11 @@ node {
 		stage('Integration Test 2') {
 		echo " Integration Test 2"
 	}
+
+
+
+		stage('Unit Test 2') {
+		echo " Unit Test "
+	}
+
 }
