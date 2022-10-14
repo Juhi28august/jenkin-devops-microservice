@@ -9,4 +9,8 @@ node {
 	stage('Integration Test') {
 		echo " Integration Test"
 	}
+
+		stage('Integration Test 2') {
+		echo " Integration Test 2"
+	}
 }
