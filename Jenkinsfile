@@ -15,7 +15,7 @@ pipeline
 			{
 				sh 'mvn --version'
 				sh 'node --version'
-				echo "Build"
+				echo "Build Test"
 
 			}
 
