@@ -15,7 +15,7 @@ pipeline
 	} 
 	stages
 	{
-		stage('Build')
+		stage('Checkout')
 		{
 			steps
 			{
@@ -35,11 +35,16 @@ pipeline
 			}
 
 		}
+		stage('Compile') {
+			steps{
+				sh "mvn clean compile"
+			}
+		}
 		stage('Test')
 		{
 			steps
 			{
-				echo "Test"
+				sh "mvn Test"
 
 			}
 
@@ -48,7 +53,7 @@ pipeline
 		{
 			steps
 			{
-				echo " Integration Test"							   
+				sh "mvn failsafe:integration-Test failsafe:varify"							   
 			}
 
 		}
